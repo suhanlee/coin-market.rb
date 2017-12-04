@@ -16,6 +16,11 @@ describe Coin::Market do
     expect(@korbit.get_ticker_eth_krw).to include("timestamp", "last")
   end
   
+  it "get_ticker etc_krw" do
+    expect(@korbit).to be_instance_of Coin::Market::Korbit
+    expect(@korbit.get_ticker_eth_krw).to include("timestamp", "last")
+  end
+
   it "get_ticker bch_krw" do
     expect(@korbit).to be_instance_of Coin::Market::Korbit
     expect(@korbit.get_ticker_bch_krw()).to include("timestamp", "last")
